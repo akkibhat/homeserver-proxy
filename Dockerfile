@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM gliderlabs/alpine:latest
+FROM jlesage/baseimage:alpine-3.8-v2.4.1
 
 # Define software versions.
 ARG NGINX_PROXY_MANAGER_VERSION=develop
@@ -154,6 +154,7 @@ VOLUME ["/config"]
 #   - 8080: HTTP traffic
 #   - 4443: HTTPs traffic
 #   - 8181: Management web interface
+# EXPOSE 8080 4443 8181
 EXPOSE 80 443 81
 
 # Metadata.
@@ -161,5 +162,5 @@ LABEL \
       org.label-schema.name="nginx-proxy-manager" \
       org.label-schema.description="Docker container for Nginx Proxy Manager" \
       org.label-schema.version="unknown" \
-      org.label-schema.vcs-url="https://github.com/akshayogra/homeserver-proxy" \
+      org.label-schema.vcs-url="https://github.com/jlesage/docker-nginx-proxy-manager" \
       org.label-schema.schema-version="1.0"
