@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM techlinenz/alpine:latest
+FROM techlinenz/alpine:3.8
 
 # Define software versions.
 ARG NGINX_PROXY_MANAGER_VERSION=develop
