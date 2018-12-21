@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM alpine:latest
+FROM gliderlabs/alpine:latest
 
 # Define software versions.
 ARG NGINX_PROXY_MANAGER_VERSION=develop
